@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    reverseproxy:
+        build:
+          context: ./nginx
+        ports:
+            - 80:80
+    test:
+        image: tomcat
