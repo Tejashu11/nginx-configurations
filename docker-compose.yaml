@@ -8,5 +8,9 @@ services:
           - '80:80'
     test:
         image: sonatype/nexus3
-        ports:
-          - '8081:8081'
+        volumes:
+          - nexus-data:/nexus-data
+volumes:
+  nexus-data:
+    external:
+      name: nexus-data
