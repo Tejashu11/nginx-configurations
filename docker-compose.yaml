@@ -6,6 +6,7 @@ services:
           context: ./nginx
         ports:
           - '80:80'
+          - '5000:5000'
     test:
         image: sonatype/nexus3
         volumes:
